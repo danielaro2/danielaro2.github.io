@@ -1,0 +1,199 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Banner */
+        #banner {
+            width: 100%;
+            height: 400px;
+            background-image: url("img/fondo.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 100px;
+        }
+
+        #banner h1 {
+            font-family: "BebasNeue";
+            font-size: 45px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 1px black;
+            color: #4baf50;
+            text-align: center;
+        }
+
+        /* Tarjetas */
+        #cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 205px;
+            height: auto;
+            flex: 0 0 auto;
+            margin: 22px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px #ddd;
+            background: white;
+            overflow: hidden;
+            margin: 22px;
+            cursor: pointer;
+            transition: all 300ms;
+        }
+
+        .card:hover {
+            background: #9ecd67;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transform: scale(1.1);
+            transition: transform 300ms;
+            padding: 0px 16px;
+        }
+
+        .card:hover img {
+            transform: scale(1);
+        }
+
+        .card .category {
+
+            font-size: 21px;
+            font-weight: bold;
+            text-align: center;
+            color: #9ecd67;
+            margin-top: 25px;
+            transition: color 300ms;
+        }
+
+        .card:hover .category {
+            color: #4baf50;
+        }
+
+        .card .description {
+
+            font-size: 15px;
+            text-align: center;
+            color: gray;
+            margin-top: 15px;
+            transition: color 300ms;
+        }
+
+        .card:hover .description {
+            color: white;
+        }
+
+        .card .readmore {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+            padding: 10px 20px;
+
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background: #4baf50;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .card .readmore:hover {
+            background: white;
+            color: #4baf50;
+        }
+
+        .container-card {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 18rem;
+            border: 1px solid #9ecd67;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #4baf50;
+            color: white;
+        }
+
+        .navbar .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar .links {
+            display: flex;
+            padding-left: 20px;
+        }
+
+        .navbar .links a {
+            color: white;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .navbar .links .links-menu {
+            color: #4baf50;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #banner {
+                height: auto;
+            }
+
+            .card {
+                max-width: 100%;
+            }
+
+            .navbar {
+                justify-content: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .links {
+                padding-left: 0;
+                justify-content: center;
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                margin: 10px;
+            }
+        }
